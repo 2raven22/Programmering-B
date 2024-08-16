@@ -14,11 +14,26 @@
     height:100vh;
     display:grid;
     place-items: center;
-    transition: 0.6s all ease-in-out;
+    transition: 0.4s all ease-in-out;
 }
 
 .visible{
     left:0;
+}
+
+.box{
+    width: 80%;
+    height:80%;
+    display:grid;
+    place-items: center;
+    border: 1px solid white;
+}
+
+#imagebox{
+    background-image: url(Assets/istockphoto-1415172922-170667a.webp);
+    background-size: cover;
+    background-position: center center;
+    color: black;
 }
 
 #page1{

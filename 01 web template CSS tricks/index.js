@@ -1,10 +1,10 @@
-let currentPage = 1
+let currentPage = 2
 //array
 let pages = []
 
 function setup(){
     console.log('P5.js er loaded')
-
+    select("#page" + currentPage).addClass('visible')
     pages=selectAll('.page')
     // kan ses pages er blevet til en liste med alle page class = page ting 
     // console.log(pages.length)
