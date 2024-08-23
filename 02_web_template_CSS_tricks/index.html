@@ -14,6 +14,20 @@
     <script src="index.js"></script>
 </head>
 <body>
+    <header>
+        <div class="menuitem active" id="menu1">
+            Side 1
+        </div>
+        <div class="menuitem" id="menu2">
+            Side 2
+        </div>
+        <div class="menuitem" id="menu3">
+            Side 3
+        </div>
+        <div class="menuitem" id="menu4">
+            Side 4
+        </div>
+    </header>
     <div class="page" id="page1">
         <div class="box">            
             <h1>Div class = box</h1>
@@ -36,10 +50,18 @@
     </div>
     <div class="page" id="page3">
         <h1>Side 3</h1>
-        
     </div>
     <div class="page" id="page4">
         <h1>Side 4</h1>
+        <div class="box">
+            <h3>Her er div med position relative</h3>
+            <div class="absolute">
+                Absolute position i forhold til parent (boksen)
+            </div>
+            <div class="fixed">
+                fixed er i forhold til hele siden
+            </div>
+        </div>
     </div>
 </body>
 </html>

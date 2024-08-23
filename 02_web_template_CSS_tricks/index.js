@@ -1,12 +1,29 @@
-let currentPage = 3
+let currentPage = 1
+let menuNumber = 1
 //array
 let pages = []
-let colors = ['red', 'green', 'blue', 'orange', 'cyan','purple','babypink']
+let menuitems //array med menupunkter
+let colors = ['red', 'green', 'blue', 'orange', 'cyan','purple','pink','lightblue']
 
 function setup(){
     console.log('P5.js er loaded')
     select("#page" + currentPage).addClass('visible')
+    select("#menu" + menuNumber).addClass('active')
+
     pages=selectAll('.page')
+    menuitems=selectAll('.menuitem')
+
+    for(m of menuitems){
+        m.mousePressed(function(e){
+            //e.target er html div
+            console.log(e.target.id)
+            //slice -1 henter det sidste bogstav i en string
+            let nr = e.target.id.slice(-1)
+            shiftPage(nr)
+        })
+    }
+
+
     // kan ses pages er blevet til en liste med alle page class = page ting 
     // console.log(pages.length)
 
@@ -33,6 +50,9 @@ function shiftPage(num){
     select("#page" + currentPage).removeClass('visible')
     currentPage = num
     select("#page" + currentPage).addClass('visible')
+    select("#menu" + menuNumber).removeClass('active')
+    menuNumber = num
+    select("#menu" + menuNumber).addClass('active')
 }
 
 function keyPressed(){
