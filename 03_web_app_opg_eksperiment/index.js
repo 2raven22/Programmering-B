@@ -1,4 +1,4 @@
-let currentPage = 3
+let currentPage = 1
 
 //array
 let pages = []
