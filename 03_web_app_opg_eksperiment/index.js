@@ -42,7 +42,7 @@ function shiftPage(num){
     }
     select("#page" + currentPage).removeClass('visible')
     select("#menu" + currentPage).removeClass('active')
-    currentPage = num
+    currentPage = num  
     select("#page" + currentPage).addClass('visible')
     select("#menu" + currentPage).addClass('active')
 }
